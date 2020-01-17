@@ -13,7 +13,7 @@ namespace ShildtExamples
 
     class BuildingDemo
     {
-        static void Main()
+        static void mein()
         {
             Building house = new Building();
             int areaPP;
@@ -24,6 +24,63 @@ namespace ShildtExamples
 
             areaPP = house.Area / house.Occupants;  
             Console.WriteLine(areaPP);
+        }
+    }
+
+    //trenning exersize with Classes
+
+    class Sup
+    {
+        public int Kartoshka;
+        public int Voda;
+        public int Svekla;
+    }
+
+    class SupInfo
+    {
+        public static void SupBorch()
+        {
+            Sup borch = new Sup();
+
+            borch.Kartoshka = 100;
+            borch.Voda = 200;
+            borch.Svekla = 50;
+            Console.WriteLine("You need buy...");
+            Console.Write("Kartoshka - "); Console.WriteLine(borch.Kartoshka);
+            Console.Write("Voda - "); Console.WriteLine(borch.Voda);
+            Console.Write("Svekla - "); Console.WriteLine(borch.Svekla);
+        }
+
+        public static void SupVermeshelka()
+        {
+            Sup vermeshel = new Sup();
+            
+            vermeshel.Kartoshka = 150;
+            vermeshel.Voda = 300;
+            vermeshel.Svekla = 0;
+            Console.WriteLine("You need buy...");
+            Console.Write("Kartoshka - "); Console.WriteLine(vermeshel.Kartoshka);
+            Console.Write("Voda - "); Console.WriteLine(vermeshel.Voda);
+            Console.Write("Svekla - "); Console.WriteLine(vermeshel.Svekla);
+
+        }
+    }
+
+    class Do
+    {
+        static void Main()
+        {
+            Console.WriteLine("What do you want to cook?");
+            Console.WriteLine("Borch or Vermeshel Sup?");
+            string cook = Console.ReadLine();
+            if(cook == "Borch")
+            {
+                SupInfo.SupBorch();
+            }
+            if(cook == "Vermeshel Sup")
+            {
+                SupInfo.SupVermeshelka();
+            }
         }
     }
 }
