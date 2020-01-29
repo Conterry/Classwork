@@ -3,7 +3,7 @@ using System;
 
 namespace ShildtExamples
 {
-    // Пример заполнения класса.
+    // (Example 1)Пример заполнения класса.
     class Building
     {
         public int Floors;
@@ -27,7 +27,7 @@ namespace ShildtExamples
         }
     }
 
-    //trenning exersize with Classes
+    //(Example 2)trenning exersize with Classes
 
     class Sup
     {
